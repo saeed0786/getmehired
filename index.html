@@ -1,0 +1,111 @@
+<!Doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+    <title>Shopping cart</title>
+
+     <style>
+     h1 {
+     	 font-family: Arial, Helvetica, sans-serif; color: blue;
+     }	
+     </style>
+	<h1  align="center">shopping cart</h1>
+	<img width="50" src="https://lh3.googleusercontent.com/proxy/xV3h7d_jt-ElK0IKjgR1fJso_-jpBI_ZK0m78JR_aTXb_WtJ75wHdsP1UC4LNEvWessWwO8RCGMlJeL1N5YRKCgU1sdxYonebklEWcs1j7e9W7NNz7b8">
+  <!--This is a coment -->
+
+
+</head>
+
+<body>
+
+<br>
+
+
+</br>
+<form>
+<table border="1">  
+​
+​
+​
+   <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Unit Price</th>
+                        <th>Total Price</th>
+                    </tr>
+                    <!--Second Row-->
+                    <tr>
+                        <th>Shirt</th>
+                        <td>
+                            <input type="text" id="ShirtQuantity">
+                        </td>
+                        <!-- <td>
+                         
+                        </td> -->
+                        <td id="ShirtUnitPrice">10</td>
+                        <td id="ShirtPrice"></td>
+                    </tr>
+                    <!--Third Row-->
+                   <tr>
+                        <th>pants</th>
+                        <td>
+                            <input type="text" id="pantsQuantity">
+                        </td>
+                        <!-- <td>
+                        
+                        </td> -->
+                        <td id="pantsUnitPrice">29</td>
+                        <td id="pantsPrice"></td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">Total</th>
+                        <td id="totalshoppingCost"></td>
+                    </tr>
+                      <input type="button" value="compute" onclick="compute()" />
+
+                    Quantity: <input id="varQuantity" type="number">
+                    *
+                    Unit Price: <input id="varUnitPrice" type="number">
+        
+        
+                </table>
+      
+                
+
+              
+                    <script>
+                     function compute(){
+                        var Quantity = document.getElementById('varQuantity').value;
+                        var price = document.getElementById('varUnitPrice').value;
+
+                         var total = Quantity * price;
+
+                        // alert("Q:"+total);
+
+                        document.getElementById('totalshoppingCost').innerHTML = total;
+                         
+                         return 0;
+
+                        var price = document.getElementById('varUnitPrice').value;
+                     
+                     var Total = Quantity * price;
+
+                     //alert("Q:"+Total);
+                     
+                     document.getElementById('TotalshoppingCost').innerHTML = Total;
+                     
+                     //var Quantity = parseInt(UnitPrice)
+                     
+                     var UnitPrice = document.getElementById('varUnitPrice').value;
+                    }
+                    </script>
+​
+​
+               
+​
+                <!---compute-->
+            
+            <button type="button" id="clearButton" onclick="clearNumbers()">Clear;</button>
+            </form>
+    </body>
+</html>
